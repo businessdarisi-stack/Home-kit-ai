@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HomeKit KI</title>
+</head>
+<body>
+  <h2>Heizungs- & Smart-Home-Berater</h2>
+  <textarea id="question" placeholder="Deine Frage hier"></textarea><br>
+  <button onclick="askAI()">Frage stellen</button>
+  <div id="answer"></div>
+
+  <script>
+    async function askAI() {
+      const question = document.getElementById("question").value;
+      const response = await fetch("fetch("https://home-kit-ai.onrender.com/ask", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ question })
+});/ask", {  // <- hier deine fetch("https://home-kit-ai.onrender.com/ask", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify({ question })
+});Render-URL eintragen
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ question })
+      });
+      const data = await response.json();
+      document.getElementById("answer").innerText = data.answer;
+    }
+  </script>
+</body>
+</html>
