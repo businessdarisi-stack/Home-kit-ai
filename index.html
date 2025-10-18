@@ -12,19 +12,14 @@
   <script>
     async function askAI() {
       const question = document.getElementById("question").value;
-      const response = await fetch("fetch("https://home-kit-ai.onrender.com/ask", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ question })
-});/ask", {  // <- hier deine fetch("https://home-kit-ai.onrender.com/ask", {
-  method: "POST",
-  headers: { "Content-Type": "application/json" },
-  body: JSON.stringify({ question })
-});Render-URL eintragen
+
+      // Render-Backend URL eintragen
+      const response = await fetch("https://home-kit-ai.onrender.com/ask", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question })
       });
+
       const data = await response.json();
       document.getElementById("answer").innerText = data.answer;
     }
