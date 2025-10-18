@@ -1,0 +1,15 @@
+# 1. Repository lokal klonen
+git clone https://github.com/businessdarisi-stack/Home-kit-ai.git
+cd Home-kit-ai
+
+# 2. Dateien ins Verzeichnis kopieren
+# (z.B. main.py, requirements.txt, frontend/)
+
+# 3. Dateien zum Git hinzufügen
+git add .
+
+# 4. Commit erstellen
+git commit -m "Add backend and frontend files"
+
+# 5. Auf GitHub hochladen
+git push -u origin main
